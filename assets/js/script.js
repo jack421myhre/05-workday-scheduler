@@ -6,16 +6,7 @@ function headerDate() {
 }
 headerDate();
 let currentTime = moment().format("HH");
-
-let wrapperParent = $(".wrapper");
-// for (let i = 0; i < wrapperParent.children().length; i++) {
-//     let hour = $(`#`);
-//     console.log(hour);
-
-//     if (hour.text() < currentTime) {
-//         console.log("past");
-//     }
-// }
+let timeBlockHour = $(".hour").prop("id");
 
 $(".hour").each(function () {
     let timeBlockHour = parseInt($(this).prop("id"));
@@ -29,5 +20,24 @@ $(".hour").each(function () {
     } else {
         $(this).siblings("textarea").addClass("present");
         $(this).siblings("textarea").removeClass("future");
+    }
+});
+
+// Save data
+// Work in Progress
+let eventDescription = $(".description");
+function saveEvent() {}
+
+saveBtn.on("click", () => {
+    if (eventDescription !== "") {
+        let savedEvent = JSON.parse(localStorage.getItem("savedEvent")) || [];
+
+        let allEvents = {
+            time: $(this).siblings(".hour").prop("id"),
+            eventDesc: $(this).siblings("textarea").val(),
+        };
+
+        savedEvent.push(allEvents);
+        localStorage.setItem("savedEvent", JSON.stringify(savedEvent));
     }
 });
