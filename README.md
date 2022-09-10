@@ -6,7 +6,7 @@ This application allows the user to keep track of their tasks throughout the day
 
 ## Deployed Application
 
-
+https://jack421myhre.github.io/05-workday-scheduler/
 
 ## Installation
 
@@ -22,8 +22,4 @@ Write tasks for the current work day. Clicking the save button on the right of e
 ![wd1](https://user-images.githubusercontent.com/73844213/189500629-09a23063-5eaa-4bb8-b13e-9408d12d33f7.png)
 ![wd2](https://user-images.githubusercontent.com/73844213/189500631-152e78e1-df6c-4f31-bdb5-075dbc17da34.png)
 
-
-## Features
-
-N/A
 
